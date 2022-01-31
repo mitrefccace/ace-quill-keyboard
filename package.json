@@ -1,0 +1,29 @@
+{
+  "name": "ace-quill-keyboard",
+  "version": "1.0.0",
+  "private": true,
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build-osx": "electron-packager . 'ACE Quill Keyboard' --asar --platform darwin --icon ./assets/acequill-icon.icns --out ./dist/darwin --overwrite",
+    "build-linux": "electron-packager . --asar --platform linux --out ./dist/linux --overwrite",
+    "build-win32": "electron-packager . 'ACE Quill Keyboard' --asar --platform win32 --icon=./assets/acequill-icon.icns --out ./dist/win32 --overwrite",
+    "build-all": "electron-packager . 'ACE Quill Keyboard' --asar --platform all --icon ./assets/acequill-icon --out ./dist --overwrite",
+    "postinstall": "electron-rebuild --force && node build.js"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "cookie-parser": "^1.4.5",
+    "electron-store": "^7.0.2",
+    "express": "^4.17.1",
+    "http-errors": "^1.8.0",
+    "morgan": "^1.10.0",
+    "serialport": "^9.0.7",
+    "utf8": "^3.0.0"
+  },
+  "devDependencies": {
+    "electron": "^6.1.12",
+    "electron-packager": "^15.2.0",
+    "electron-rebuild": "^2.3.5"
+  }
+}

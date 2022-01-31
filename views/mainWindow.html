@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ACE Quill Keyboard</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./stylesheets/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form>
+                    <div class="form-group">
+                        <label for="Serial">Serial</label>
+                        <select name="serial" id="serial" class="form-control">
+                            <option selected disabled>Getting Available Serial Ports...</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="pacing">Pacing(ms)</label>
+                        <input name="pacing" id="pacing" class="form-control" value="100" />
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-primary" id="savebutton">Save</button>
+                        <button type="button" class="btn btn-success" id="testbutton">Test</button>
+                    </div>
+                    <div class="form-group">
+                        <label for="TestSentence">Test Phrase</label>
+                        <input name="TestSentence" id="testSentence" class="form-control"
+                            value="ACE Quill is Awesome!" />
+                    </div>
+                    <div class="form-group">
+                        <label for="testkeyboard">Test Results</label>
+                        <textarea class="form-control" id="testkeyboard" rows="3"></textarea>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./javascript/mainWindow.js"></script>
+
+
+</body>
+
+</html>
